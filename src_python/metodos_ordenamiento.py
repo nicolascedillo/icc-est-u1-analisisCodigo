@@ -8,3 +8,15 @@ class MetodosOrdenamiento:
                     arreglo[i], arreglo[j] = arreglo[j], arreglo[i]
         return arreglo
                     
+    def sort_selection(self,array):
+        array = array.copy()
+        for i in range (len(array)-1):
+            ind = i
+            for j in range (i+1,len(array)):
+                if array[ind]>array[j]:
+                    ind = j
+            if ind != i:
+                array[ind],array[j] = array[j],array[ind]
+        return array        
+        
+               
