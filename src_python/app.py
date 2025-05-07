@@ -3,6 +3,7 @@ from benchmarking import Benchmarking
 from metodos_ordenamiento import MetodosOrdenamiento
 import matplotlib
 import matplotlib.pyplot as plt
+import datetime
 
 if __name__ == "__main__":
     print ("Funciona")
@@ -37,13 +38,13 @@ if __name__ == "__main__":
         tiempos_by_method[nombre].append(tiempo)
         
     #crear una gráfica
-    plt.figure(figsize=(10,6))
+    plt.figure(figsize=(10,6),num="Nicolás Cedillo 2025-05-07 8:58")
     for nombre, tiempo in tiempos_by_method.items():
         plt.plot(tamanios, tiempo, label =nombre,marker='o')
         
     #Agregar parametros
     plt.grid()
-    plt.title("Gráfico")
+    plt.title("Comparativa métodos \n Nicolás Cedillo 2025-05-07 8:58")
     plt.xlabel("Tamaño")
     plt.ylabel("Tiempo")
     plt.legend()
